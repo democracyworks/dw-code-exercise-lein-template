@@ -16,7 +16,11 @@
    [:h1 "Getting started"]
    [:p "Thank you for applying to work at Democracy Works! "
     "This coding exercise is designed to show off your ability to program web applications in Clojure. "
-    "You should spend no more than 2 hours on it and then turn it in to us."]
+    "You should spend no more than 2 hours on it and then turn it in to us "
+    "by running the command " [:code "lein submit"] " and following the instructions it prints out. "
+    "While we will be evaluating how much of the project you complete, we know that 2 hours isn't enough time to do a "
+    "thorough and complete job on all of it, and we're not expecting you to. We just want to see what you get working "
+    "in that amount of time."]
    [:p "It is a server-side web application written in Clojure and using the "
     [:a {:href "https://github.com/ring-clojure/ring"} "Ring"] ", "
     [:a {:href "https://github.com/weavejester/compojure"} "Compojure"] ", and "
@@ -33,7 +37,8 @@
     [:ul
      [:li "Documenting your code"]
      [:li "Adding tests for your code"]
-     [:li "Standardizing and/or augmenting the address data to derive more OCD division IDs (e.g. county and legislative districts)"]
+     [:li "Standardizing and/or augmenting the address data to derive more OCD division IDs (e.g. county and "
+      "legislative districts)"]
      [:li "Noting additional features or other improvements you would make if you had more time"]]]
    [:h2 "All about OCD-IDs"]
    [:ul
