@@ -1,4 +1,4 @@
-(defproject dw-code-exercise/lein-template "0.1.0-SNAPSHOT"
+(defproject dw-code-exercise/lein-template "3.0.0"
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
