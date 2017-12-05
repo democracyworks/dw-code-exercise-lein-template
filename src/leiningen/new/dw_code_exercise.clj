@@ -29,6 +29,7 @@
     (main/info (str "Generating new Democracy Works code exercise project in '" name "' directory."))
     (->files data
              ["src/{{sanitized}}/core.clj" (render "core.clj" data)]
+             ["src/{{sanitized}}/home.clj" (render "home.clj" data)]
              ["src/{{sanitized}}/us_state.clj" (render "us_state.clj" data)]
              ["project.clj" (render "project.clj" data)]
              ["resources/public/default.css" (render "default.css" data)]
