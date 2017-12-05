@@ -7,4 +7,5 @@
                  [compojure "1.6.0"]
                  [hiccup "1.0.5"]]
   :plugins [[lein-ring "0.12.1"]]
-  :ring {:handler {{name}}.core/handler})
+  :ring {:handler {{name}}.core/handler}
+  :aliases {"submit" ["run" "-m" "{{name}}.submit"]})
