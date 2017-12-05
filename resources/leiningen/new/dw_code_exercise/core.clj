@@ -17,6 +17,11 @@
     [:link {:rel "stylesheet" :href "default.css"}]]
    [:h1 "Getting started"]
    [:p "Thank you for applying to work at Democracy Works! This coding exercise is designed to show off your ability to program web applications in Clojure. You should spend no more than 2 hours on it and then turn it in to us."]
+   [:p "It is a server-side web application written in Clojure and using the "
+    [:a {:href "https://github.com/ring-clojure/ring"} "Ring"] ", "
+    [:a {:href "https://github.com/weavejester/compojure"} "Compojure"] ", and "
+    [:a {:href "https://github.com/weavejester/hiccup"} "Hiccup"] " libraries."
+    "You should feel free to use other libraries as you see fit."]
    [:p "Right now the form below submits to a missing route in the app. To complete the exercise, do the following:"]
    [:ul
     [:li "Create the missing /search route"]
@@ -25,10 +30,11 @@
     [:ul
      [:li "District divisions are "
       [:a {:href "http://opencivicdata.readthedocs.io/en/latest/data/datatypes.html"}
-       "Open Civic Data division identifiers"]
-      " and they look like this: "
+       "Open Civic Data division identifiers (a.k.a. OCD-IDs)"]
+      " and they look like this (for the state of Alabama): "
       [:code "ocd-division/country:us/state:al"]]
-     [:li "A given address can be broken down into several division identifiers, for example:"]
+     [:li "A given address can be broken down into several division identifiers."
+      "For example an address in Birmingham, Alabama would be associated with the following OCD-IDs:"]
      [:ul
       [:li [:code "ocd-division/country:us"]]
       [:li [:code "ocd-division/country:us/state:al"]]
@@ -40,12 +46,13 @@
       [:li "The response will be in the "
        [:a {:href "https://github.com/edn-format/edn"}
         "EDN format"]
-       " by default (commonly used in Clojure), but you can request JSON by setting your request's Accept header to 'application/json' if you prefer"]]]
+       " (commonly used in Clojure) by default, but you can request JSON by setting your request's Accept header to 'application/json' if you prefer"]]]
     [:li "Display any matching elections to the user"]]
    [:p "You will get bonus points for:"
     [:ul
      [:li "Documenting your code"]
      [:li "Adding tests for your code"]
+     [:li "Standardizing and/or augmenting the address data to derive more OCD division IDs (e.g. county and legislative districts)"]
      [:li "Noting additional features or other improvements you would make if you had more time"]]]
    [:h1 "Find my next election"]
    [:form {:action "/search" :method "post"}
