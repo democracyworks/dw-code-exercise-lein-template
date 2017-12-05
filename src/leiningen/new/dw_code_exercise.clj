@@ -33,6 +33,7 @@
              ["src/{{sanitized}}/us_state.clj" (render "us_state.clj" data)]
              ["project.clj" (render "project.clj" data)]
              ["resources/public/default.css" (render "default.css" data)]
+             ["test/{{sanitized}}/us_state_test.clj" (render "us_state_test.clj" data)]
              [".gitignore" (render "gitignore" data)])
     (configure-git-repo name)
     (main/info (str/join "\n"
