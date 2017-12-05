@@ -1,6 +1,6 @@
 (defproject dw-code-exercise/lein-template "3.0.1-SNAPSHOT"
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
+  :description "Democracy Works developer applicant coding exercise template"
+  :url "https://github.com/democracyworks/dw-code-exercise-lein-template"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :eval-in-leiningen true)
