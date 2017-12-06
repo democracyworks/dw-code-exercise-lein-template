@@ -6,7 +6,7 @@
             [{{name}}.home :as home]))
 
 (defroutes app
-  (GET "/" [] (home/page))
+  (GET "/" [] home/page)
   (route/resources "/")
   (route/not-found "Not found"))
 

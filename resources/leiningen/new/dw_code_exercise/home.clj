@@ -3,7 +3,7 @@
             [ring.util.anti-forgery :refer [anti-forgery-field]]
             [{{name}}.us-state :as us-state]))
 
-(def header
+(defn header [_]
   [:head
    [:meta {:charset "UTF-8"}]
    [:meta {:name "viewport"
@@ -11,7 +11,7 @@
    [:title "Find my next election"]
    [:link {:rel "stylesheet" :href "default.css"}]])
 
-(def instructions
+(defn instructions [_]
   [:div {:class "instructions"}
    [:h1 "Getting started"]
    [:p "Thank you for applying to work at Democracy Works! "
@@ -65,7 +65,7 @@
        "EDN format"]
       " (commonly used in Clojure) by default, but you can request JSON by setting your request's Accept header to 'application/json' if you prefer"]]]])
 
-(def address-form
+(defn address-form [_]
   [:div {:class "address-form"}
    [:h1 "Find my next election"]
    [:form {:action "/search" :method "post"}
@@ -100,8 +100,8 @@
     [:div.button
      [:button {:type "submit"} "Search"]]]])
 
-(defn page []
+(defn page [request]
   (html5
-   header
-   instructions
-   address-form))
+   (header request)
+   (instructions request)
+   (address-form request)))
