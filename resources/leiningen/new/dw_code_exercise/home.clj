@@ -74,7 +74,7 @@
    [:p "Depending on the time of year and whether it's an odd or even-numbered "
     "year, the number of elections in the system can vary wildly. "
     "We maintain an up-to-date "
-    [:a {:href "https://gist.github.com/cap10morgan/61f48a8d868618679fe7d979dd5cfebb"}
+    [:a {:href "https://github.com/democracyworks/dw-code-exercise-lein-template/wiki/Current-elections"}
      "list of OCD-IDs that should return an election"]
     " until the dates they are listed under. Please refer to that for example "
     "OCD-IDs that will return an election to your app."]])
