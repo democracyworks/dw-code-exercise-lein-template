@@ -11,8 +11,8 @@
    [:title "Find my next election"]
    [:link {:rel "stylesheet" :href "default.css"}]])
 
-(defn instructions [_]
-  [:div {:class "instructions"}
+(defn getting-started [_]
+  [:div {:class "getting-started"}
    [:h1 "Getting started"]
    [:p "Thank you for applying to work at Democracy Works! "
     "This coding exercise is designed to show off your ability to program web applications in Clojure. "
@@ -39,7 +39,10 @@
      [:li "Adding tests for your code"]
      [:li "Standardizing and/or augmenting the address data to derive more OCD division IDs (e.g. county and "
       "legislative districts)"]
-     [:li "Noting additional features or other improvements you would make if you had more time"]]]
+     [:li "Noting additional features or other improvements you would make if you had more time"]]]])
+
+(defn ocd-id-explainer [_]
+  [:div {:class "ocd-id-explainer"}
    [:h2 "All about OCD-IDs"]
    [:ul
     [:li "OCD-IDs are "
@@ -47,7 +50,7 @@
       "Open Civic Data division identifiers"]
      " and they look like this (for the state of Alabama): "
      [:code "ocd-division/country:us/state:al"]]
-    [:li "A given address can be broken down into several OCD-IDs."
+    [:li "A given address can be broken down into several OCD-IDs. "
      "For example an address in Birmingham, Alabama would be associated with the following OCD-IDs:"]
     [:ul
      [:li [:code "ocd-division/country:us"]]
@@ -64,6 +67,23 @@
       [:a {:href "https://github.com/edn-format/edn"}
        "EDN format"]
       " (commonly used in Clojure) by default, but you can request JSON by setting your request's Accept header to 'application/json' if you prefer"]]]])
+
+(defn current-elections-link [_]
+  [:div {:class "current-elections-link"}
+   [:h2 "Current elections"]
+   [:p "Depending on the time of year and whether it's an odd or even-numbered "
+    "year, the number of elections in the system can vary wildly. "
+    "We maintain an up-to-date "
+    [:a {:href "https://github.com/democracyworks/dw-code-exercise-lein-template/wiki/Current-elections"}
+     "list of OCD-IDs that should return an election"]
+    " until the dates they are listed under. Please refer to that for example "
+    "OCD-IDs that will return an election to your app."]])
+
+(defn instructions [request]
+  [:div {:class "instructions"}
+   (getting-started request)
+   (ocd-id-explainer request)
+   (current-elections-link request)])
 
 (defn address-form [_]
   [:div {:class "address-form"}
