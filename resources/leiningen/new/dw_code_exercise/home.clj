@@ -57,9 +57,11 @@
      [:li [:code "ocd-division/country:us/state:al"]]
      [:li [:code "ocd-division/country:us/state:al/county:jefferson"]]
      [:li [:code "ocd-division/country:us/state:al/place:birmingham"]]]
-    [:li "Not all of those are derivable from just an address (without running it through a standardization and augmentation service). "
-     "For example, just having a random address in Birmingham doesn't tell us what county it is in. "
-     "But we can derive a basic set of country, state, and place OCD-IDs that will be a good starting point for this project. "
+    [:li "Not all of those are derivable from just an address (without "
+     "running it through a standardization and augmentation service). "
+     "For example, just having a random address in Birmingham doesn't tell us "
+     "what county it is in. But we can derive a basic set of state and place "
+     "(i.e. city) OCD-IDs that will be a good starting point for this project. "
      "This entails... "
      [:ul
       [:li "lower-casing the state abbreviation and appending it to "
