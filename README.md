@@ -6,7 +6,7 @@ A Leiningen template for Democracy Works developer application code exercises.
 
 `lein new dw-code-exercise my-exercise`
 
-[More details](https://gist.github.com/cap10morgan/c51ecf19e9c8c0f54301ada644a81a47)
+[More details](https://github.com/democracyworks/dw-code-exercise-lein-template/wiki)
 
 ## License
 
