@@ -68,7 +68,7 @@
        [:code "ocd-division/country:us/state:"]]
       [:li "creating a copy of the state OCD-ID"]
       [:li "appending " [:code "/place:"] " to it"]
-      [:li "lower-casing the city value and appending it to that."]]
+      [:li "lower-casing the city value, replacing all spaces with underscores, and appending it to that."]]
      "Then you should supply " [:em "both"] " OCD-IDs to your election API "
      "request, separated by a comma as shown in the curl example below."]
     [:li "Elections can be retrieved from the Democracy Works elections API for a set of district divisions like so:"]
