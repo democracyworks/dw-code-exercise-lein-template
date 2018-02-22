@@ -1,4 +1,4 @@
-(defproject dw-code-exercise/lein-template "3.0.5"
+(defproject dw-code-exercise/lein-template "3.0.6-SNAPSHOT"
   :description "Democracy Works developer applicant coding exercise template"
   :url "https://github.com/democracyworks/dw-code-exercise-lein-template"
   :license {:name "Eclipse Public License"
