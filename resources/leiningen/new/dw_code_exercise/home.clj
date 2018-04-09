@@ -48,18 +48,18 @@
     [:li "OCD-IDs are "
      [:a {:href "http://opencivicdata.readthedocs.io/en/latest/data/datatypes.html"}
       "Open Civic Data division identifiers"]
-     " and they look like this (for the state of Oregon): "
-     [:code "ocd-division/country:us/state:or"]]
+     " and they look like this (for the state of New Jersey): "
+     [:code "ocd-division/country:us/state:nj"]]
     [:li "A given address can be broken down into several OCD-IDs. "
-     "For example an address in Portland, Oregon would be associated with the following OCD-IDs:"]
+     "For example an address in Newark, New Jersey would be associated with the following OCD-IDs:"]
     [:ul
      [:li [:code "ocd-division/country:us"]]
-     [:li [:code "ocd-division/country:us/state:or"]]
-     [:li [:code "ocd-division/country:us/state:or/county:multnomah"]]
-     [:li [:code "ocd-division/country:us/state:or/place:portland"]]]
+     [:li [:code "ocd-division/country:us/state:nj"]]
+     [:li [:code "ocd-division/country:us/state:nj/county:essex"]]
+     [:li [:code "ocd-division/country:us/state:nj/place:newark"]]]
     [:li "Not all of those are derivable from just an address (without "
      "running it through a standardization and augmentation service). "
-     "For example, just having a random address in Portland doesn't tell us "
+     "For example, just having a random address in Newark doesn't tell us "
      "what county it is in. But we can derive a basic set of state and place "
      "(i.e. city) OCD-IDs that will be a good starting point for this project. "
      "This entails... "
@@ -73,7 +73,7 @@
      "request, separated by a comma as shown in the curl example below."]
     [:li "Elections can be retrieved from the Democracy Works elections API for a set of district divisions like so:"]
     [:ul
-     [:li [:code "curl 'https://api.turbovote.org/elections/upcoming?district-divisions=ocd-division/country:us/state:or,ocd-division/country:us/state:or/place:portland'"]]
+     [:li [:code "curl 'https://api.turbovote.org/elections/upcoming?district-divisions=ocd-division/country:us/state:nj,ocd-division/country:us/state:nj/place:newark'"]]
      [:li "The response will be in the "
       [:a {:href "https://github.com/edn-format/edn"}
        "EDN format"]
